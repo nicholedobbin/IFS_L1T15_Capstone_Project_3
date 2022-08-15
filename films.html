@@ -1,0 +1,144 @@
+<!--
+======================================== DESCRIPTION ====================================================================
+This is the Films page, containing 2 sections:
+    1) Header section with nav-lnk to homepage, title, images with labels and external links to image sources.
+    2) Favourites section with title, paragraph and submit button form for user to submit their favourite film.
+
+Please see 'References.txt' for the list of sources I used in this project.
+QUESTIONS:
+    - How do I get the homepage nav-link to align with the header title?
+    - How do I get the external links to change colour (see main.scss Question in body section)?
+    - How do I get the film titles to stay under the film image when adjusting viewport?
+=========================================================================================================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birding: Films</title>
+    <!-- Bootstrap CDN link: Compiled CSS -->
+    <link 
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" 
+      rel="stylesheet" 
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" 
+      crossorigin="anonymous"
+    >
+    <!-- Link to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!-- Link to file 'main.scss'-->
+    <link href="./main.css" rel="stylesheet">
+</head>
+<body>
+    <!--  Create Films container border for header and images with external. -->
+    <div class="container-border" id="dark-container">
+        <!-- Create header container with title, subtitle and nav link to homepage. -->
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <ul class="nav justify-content-start">
+                        <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                        </li>
+                    </ul>
+                    <h1 class="display-1 text-center mt-5 mb-0 header-title">Films</h1>
+                    <hr class="my-3">
+                    <h3 class="fs-2 text-center mt-0 mb-5">
+                        Looking for some bird-related film inspo?
+                        <br>
+                        Check out our top 3 favourites
+                    </h3>
+                </div>
+            </div>
+        </div>
+        <!-- Create Films container with images, text and external links. -->
+        <div class="container w-75">
+            <!-- Film images -->
+            <div class="row">
+                <div class="col-sm-4 py-4">
+                    <img src="./images/theBigYear.png" alt="The Big Year" class="img-fluid">
+                </div>
+                <div class="col-sm-4 py-4">
+                    <img src="./images/theStarling.png" alt="The Starling" class="img-fluid">
+                </div>
+                <div class="col-sm-4 py-4">
+                    <img src="./images/surfsUp.png" alt="Surf's Up"class="img-fluid">                    
+                </div>
+            </div>
+            <!-- Film names with external links -->
+            <div class="row text-center mb-5">
+                <div class="col-4">
+                    <p class="external-link">
+                        <a 
+                            href="https://www.imdb.com/title/tt1053810/?ref_=ttmi_tt" 
+                            class="external-link"
+                            target="_blank">
+                            The Big Year
+                        </a>
+                    </p> 
+                </div>
+                <div class="col-4">
+                    <p>
+                        <a 
+                            href="https://www.imdb.com/title/tt5164438/?ref_=ttmi_tt" 
+                            class="external-link"
+                            target="_blank">
+                            The Starling
+                        </a>
+                    </p>
+                </div>
+                <div class="col-4">
+                    <p>
+                        <a 
+                            href="https://www.imdb.com/title/tt0423294/?ref_=tt_mv_close" 
+                            class="external-link"
+                            target="_blank">
+                            Surf's Up
+                        </a>
+                    </p>
+                </div> 
+            </div>
+        </div>
+    </div>
+    <!--  Create Your Favourite container for title, paragraph and submit button form. -->
+    <div class="container-border" id="light-container">
+        <div class="container w-75 py-5">
+            <div class="row">
+                <div class="col-sm">
+                    <h1 class="display-5 fw-bold text-center pt-5 pb-1">What's your favourite?</h1>
+                    <hr class="my-2">
+                </div>
+                <div class="row">
+                    <div class="col-sm">
+                        <p class="text-center pt-4 pb-0 lead">
+                            Let us know your favourite bird film and we'll add it to the list
+                        </p>
+                    </div>
+                </div>
+                <!-- Text area form. -->
+                <div class="row w-100">
+                    <div class="form-floating mt-5 mb-3">
+                        <textarea 
+                            name="query" 
+                            id="query" 
+                            style="height: 70px" 
+                            class="form-control" 
+                            placeholder="Your favourite bird film">
+                        </textarea>
+                    </div>
+                </div>
+                <!-- Submit button. -->
+                <div class="row">
+                    <div class="col-sm  text-center">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>          
+            </div>
+        </div>
+    </div>
+</body>
+</html>
